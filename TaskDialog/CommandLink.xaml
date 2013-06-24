@@ -9,8 +9,7 @@
 	x:Name="UserControl"
 	d:DataContext="{d:DesignData Source=DesignData/DesignerCommandLink.xaml}"
 	d:DesignWidth="382"
-	SnapsToDevicePixels="True"
-	TextOptions.TextFormattingMode="Display">
+	SnapsToDevicePixels="True">
 
 	<UserControl.Resources>
 		<ResourceDictionary>
@@ -45,81 +44,6 @@
 								<GradientStop Color="White" Offset="1"/>
 							</LinearGradientBrush>
 						</Border.Background>
-						<VisualStateManager.VisualStateGroups>
-							<VisualStateGroup x:Name="CommonStates">
-								<VisualStateGroup.Transitions>
-									<VisualTransition GeneratedDuration="0:0:1"/>
-									<VisualTransition GeneratedDuration="0:0:0.25" To="Disabled"/>
-									<VisualTransition From="Disabled" GeneratedDuration="0:0:0.25"/>
-									<VisualTransition GeneratedDuration="0:0:0.25" To="Pressed"/>
-									<VisualTransition GeneratedDuration="0:0:0.5" To="MouseOver"/>
-								</VisualStateGroup.Transitions>
-								<VisualState x:Name="Normal"/>
-								<VisualState x:Name="MouseOver">
-									<Storyboard>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="CommandLinkText">
-											<EasingColorKeyFrame KeyTime="0" Value="#FF074AE5"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="CommandLinkTextExtra">
-											<EasingColorKeyFrame KeyTime="0" Value="#FF074AE5"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="CommandLinkBorder">
-											<EasingColorKeyFrame KeyTime="0" Value="#FFC6C6C6"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="CommandLinkBorder">
-											<EasingColorKeyFrame KeyTime="0" Value="WhiteSmoke"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="CommandLinkBorder">
-											<EasingColorKeyFrame KeyTime="0" Value="WhiteSmoke"/>
-										</ColorAnimationUsingKeyFrames>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandLinkIcon2">
-											<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-										</DoubleAnimationUsingKeyFrames>
-									</Storyboard>
-								</VisualState>
-								<VisualState x:Name="Pressed">
-									<Storyboard>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Border.BorderBrush).(SolidColorBrush.Color)" Storyboard.TargetName="CommandLinkBorder">
-											<EasingColorKeyFrame KeyTime="0" Value="#FFADADAD"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="CommandLinkBorder">
-											<EasingColorKeyFrame KeyTime="0" Value="#FFF2F3F3"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="CommandLinkBorder">
-											<EasingColorKeyFrame KeyTime="0" Value="#FFF2F3F3"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="CommandLinkBorder">
-											<EasingColorKeyFrame KeyTime="0" Value="#FFF2F3F3"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="CommandLinkText">
-											<EasingColorKeyFrame KeyTime="0" Value="#FF062073"/>
-										</ColorAnimationUsingKeyFrames>
-										<ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="CommandLinkTextExtra">
-											<EasingColorKeyFrame KeyTime="0" Value="#FF062073"/>
-										</ColorAnimationUsingKeyFrames>
-									</Storyboard>
-								</VisualState>
-								<VisualState x:Name="Disabled">
-									<Storyboard>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandLinkTextExtra">
-											<EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
-										</DoubleAnimationUsingKeyFrames>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandLinkText">
-											<EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
-										</DoubleAnimationUsingKeyFrames>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandLinkIcon4">
-											<EasingDoubleKeyFrame KeyTime="0" Value="0.5"/>
-										</DoubleAnimationUsingKeyFrames>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandLinkIcon3">
-											<EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-										</DoubleAnimationUsingKeyFrames>
-										<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="CommandLinkIcon1">
-											<EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-										</DoubleAnimationUsingKeyFrames>
-									</Storyboard>
-								</VisualState>
-							</VisualStateGroup>
-						</VisualStateManager.VisualStateGroups>
 						<Grid x:Name="CommandLinkLayout">
 							<Grid.Resources>
 								<Style TargetType="{x:Type Image}">

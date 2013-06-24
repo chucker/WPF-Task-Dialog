@@ -14,8 +14,7 @@
 	SizeToContent="WidthAndHeight"
 	MaxWidth="500"
 	MinWidth="375"
-	SnapsToDevicePixels="True"
-	TextOptions.TextFormattingMode="Display">
+	SnapsToDevicePixels="True">
 
 	<Window.Resources>
 		<ResourceDictionary>
@@ -145,7 +144,6 @@
 										   Source="{DynamicResource ExpArrDown1}"
 										   Stretch="None" Width="19" Height="19"
 										   VerticalAlignment="Center" HorizontalAlignment="Left"
-										   UseLayoutRounding="True"
 										   RenderOptions.BitmapScalingMode="NearestNeighbor"/>
 									<TextBlock x:Name="ShowDetailsLabel"
 											   Text="Show details"

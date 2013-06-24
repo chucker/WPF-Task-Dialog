@@ -5,8 +5,7 @@
 		Width="410"
 		SizeToContent="Height"
 		ResizeMode="CanMinimize"
-		SnapsToDevicePixels="True"
-		TextOptions.TextFormattingMode="Display">
+		SnapsToDevicePixels="True">
 	<Border Padding="9">
 		<Grid>
 			<Grid.ColumnDefinitions>
